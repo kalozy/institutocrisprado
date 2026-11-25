@@ -40,9 +40,10 @@
   }
 
   /* ---------- login ---------- */
-  function showLogin(cfgMissing) {
+  function showLogin(setup) {
     $('#app').hidden = true; $('#loginView').hidden = false;
-    $('#setupMsg').hidden = !cfgMissing;
+    $('#setupMsg').hidden = !setup;
+    if (setup) $('#setupMsg').textContent = setup;
     setTimeout(function () { $('#pw').focus(); }, 30);
   }
   $('#loginForm').addEventListener('submit', function (e) {
@@ -416,7 +417,10 @@
   }
   api('me').then(function (j) {
     S.products = j.products || [];
-    if (!j.configured) return showLogin(true);
+    var steps = [];
+    if (j.missing && j.missing.length) steps.push('Crie em Settings > Environment Variables: ' + j.missing.join(' e ') + '.');
+    if (j.database === false) steps.push('Conecte o banco: Storage > Neon > Connect Project, marcando Production e Preview.');
+    if (steps.length) return showLogin('Falta configurar no Vercel. ' + steps.join(' ') + ' Depois faça Deployments > Redeploy (variáveis novas só valem em um deploy novo).');
     if (!j.logged) return showLogin(false);
     S.csrf = j.csrf; start();
   }).catch(function () { showLogin(false); });
