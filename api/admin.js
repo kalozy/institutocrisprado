@@ -4,6 +4,7 @@ import { configured, session, checkPassword, startSession, endSession, webhookKe
 import * as store from '../lib/store.js';
 import { enabled, event, userData, sendCapi, GRAPH_VERSION } from '../lib/meta.js';
 import { PRODUCTS, getProduct } from '../lib/products.js';
+import { databaseLabel } from '../lib/db.js';
 
 const PRODUCT_LIST = Object.values(PRODUCTS).map(({ id, name, kind, path }) => ({ id, name, kind, path }));
 const mask = (t) => (t ? '•'.repeat(12) + String(t).slice(-4) : '');
@@ -30,7 +31,11 @@ export default async function handler(req, res) {
   try {
     if (action === 'me') {
       const s = session(req);
-      return send(res, 200, { ok: true, configured: configured(), logged: !!s, csrf: s ? s.csrf : '', products: PRODUCT_LIST });
+      const missing = [];
+      if (!process.env.ADMIN_PASSWORD) missing.push('ADMIN_PASSWORD');
+      if ((process.env.APP_SECRET || '').length < 16) missing.push('APP_SECRET');
+      const db = databaseLabel();
+      return send(res, 200, { ok: true, configured: configured(), database: db !== 'não conectado', missing, logged: !!s, csrf: s ? s.csrf : '', products: PRODUCT_LIST });
     }
     if (action === 'login' && post) {
       if (!configured()) return send(res, 503, { ok: false, error: 'Defina ADMIN_PASSWORD e APP_SECRET nas variáveis de ambiente do Vercel.' });
@@ -157,7 +162,7 @@ export default async function handler(req, res) {
           ok: true, scope, settings,
           info: {
             graph: GRAPH_VERSION, node: process.version, webhook_key: webhookKey(), capi_last: last, capi_last_error: lastErr,
-            database: process.env.DATABASE_URL || process.env.POSTGRES_URL ? (/neon\.tech/i.test(process.env.DATABASE_URL || process.env.POSTGRES_URL) ? 'Postgres (Neon)' : 'Postgres') : (process.env.PGLITE_MODULE ? 'PGlite (teste local)' : 'não configurado')
+            database: databaseLabel()
           }
         });
       }
