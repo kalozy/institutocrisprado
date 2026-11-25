@@ -1,0 +1,31 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "redirects": [
+    { "source": "/cursos", "destination": "/#cursos", "permanent": true },
+    { "source": "/sobre", "destination": "/#sobre", "permanent": true },
+    { "source": "/procedimentos", "destination": "/#procedimentos", "permanent": true },
+    { "source": "/contato", "destination": "/#contato", "permanent": true },
+    { "source": "/startlips", "destination": "/start-lips/", "permanent": true },
+    { "source": "/transforme", "destination": "/transforme-faces-com-fios/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(woff2|webp|jpg|png|mp4)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
+    },
+    {
+      "source": "/assets/(.*)\\.js",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }]
+    }
+  ]
+}

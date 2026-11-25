@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#382722">
+<title>Painel | Instituto Cris Prado</title>
+<link rel="icon" href="/assets/instituto/01-imagem.webp" type="image/webp">
+<style>
+@font-face{font-family:Cormorant;src:url(/assets/fonts/cormorant-normal.woff2) format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:Montserrat;src:url(/assets/fonts/montserrat-normal.woff2) format("woff2");font-weight:300 700;font-display:swap}
+:root{--bg:#F7F2EC;--card:#FFFDFB;--ink:#432F2B;--ink2:#6A5952;--ink3:#857369;--line:#E9DED4;--line2:#F3ECE5;--dark:#382722;--dark2:#4F3A34;--cream:#F7EFE5;--gold:#B99B61;--gold-l:#D8BD97;--mark:#B07A2A;--mark-d:#8E6220;
+--ok:#2F6B45;--ok-bg:#E5F0E7;--warn:#8A5A00;--warn-bg:#FBF0D9;--bad:#A3261C;--bad-bg:#FBE4E1;--info:#2D5B8A;--info-bg:#E6EEF6;
+--sans:Montserrat,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--serif:Cormorant,Georgia,serif}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 14.5px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--mark);outline-offset:2px;border-radius:6px}
+.num{font-variant-numeric:tabular-nums}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Login */
+.login{min-height:100dvh;display:grid;place-items:center;padding:24px;background:var(--dark)}
+.login form{width:min(390px,100%);background:var(--card);border-radius:24px;padding:36px 32px}
+.login img{width:41px;height:52px;margin-bottom:14px}
+.login h1{font:500 34px/1.05 var(--serif);margin:0 0 4px}
+.login p{color:var(--ink2);margin:0 0 22px}
+.login label{display:block;font-weight:600;font-size:13.5px;margin-bottom:6px}
+.login input{width:100%;height:48px;border:1.5px solid var(--line);border-radius:12px;padding:0 14px;font-size:16px;background:#fff}
+.login input:focus{outline:none;border-color:var(--dark)}
+.login .e{background:var(--bad-bg);color:var(--bad);border-radius:10px;padding:10px 12px;font-size:14px;margin:12px 0 0}
+.setup{background:var(--warn-bg);color:var(--warn);border-radius:12px;padding:12px 14px;font-size:13.5px;margin-bottom:16px}
+
+/* Shell */
+.top{background:var(--dark);color:var(--cream);position:sticky;top:0;z-index:20}
+.top__in{max-width:1320px;margin:0 auto;padding:0 20px;min-height:64px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none}
+.brand img{width:26px;height:33px}
+.brand b{font:500 22px/1 var(--serif)}
+.brand span{color:var(--gold-l);font-size:12px}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs a{padding:8px 14px;border-radius:999px;text-decoration:none;color:#D7CAC1;font-weight:500;white-space:nowrap;font-size:14px}
+.tabs a[aria-current="page"]{background:var(--dark2);color:#fff}
+.top__r{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:13px;color:#D7CAC1;white-space:nowrap}
+.top__r select{background:var(--dark2);color:#fff;border:1px solid #ffffff2a;border-radius:10px;height:36px;padding:0 10px;font-size:13.5px}
+.live{display:inline-flex;align-items:center;gap:7px}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:#7CC59A;box-shadow:0 0 0 3px rgba(124,197,154,.25)}
+.top__r button.link{background:none;border:0;color:var(--gold-l);cursor:pointer;text-decoration:underline;padding:0}
+@media (max-width:820px){.top__in{padding:10px 16px;gap:8px 12px}.tabs{order:3;width:100%}.live{display:none}.top__r{margin-left:auto}}
+main{max-width:1320px;margin:0 auto;padding:24px 20px 90px}
+.view{display:none}.view.on{display:block}
+.head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.head h1{font:500 30px/1.1 var(--serif);margin:0}
+.head h1 small{font:500 14px var(--sans);color:var(--ink3);margin-left:8px}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:3px}
+.seg button{border:0;background:none;padding:7px 12px;border-radius:9px;cursor:pointer;color:var(--ink2);font-weight:500;font-size:13.5px}
+.seg button[aria-pressed="true"]{background:var(--dark);color:#fff}
+.range{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.range input[type=date]{height:38px;border:1px solid var(--line);border-radius:10px;padding:0 10px;background:var(--card)}
+.banner{display:flex;gap:12px;align-items:flex-start;background:var(--warn-bg);color:var(--warn);border-radius:14px;padding:12px 16px;margin-bottom:16px;font-weight:500}
+.banner a{font-weight:600}
+
+.grid{display:grid;gap:16px}
+.tiles{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.card h2{font:600 14.5px/1.3 var(--sans);margin:0 0 4px}
+.card .sub{color:var(--ink3);font-size:12.5px;margin:0 0 14px}
+.tile .k{color:var(--ink2);font-size:13px;font-weight:500}
+.tile .v{font:600 28px/1.15 var(--sans);margin:6px 0 2px;letter-spacing:-.01em}
+.tile .s{color:var(--ink3);font-size:12.5px}
+.two{grid-template-columns:1fr}
+@media (min-width:1000px){.two{grid-template-columns:1.35fr 1fr}}
+.three{grid-template-columns:1fr}
+@media (min-width:900px){.three{grid-template-columns:repeat(3,1fr)}}
+.mt{margin-top:16px}
+
+.fun{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.fun li{display:grid;grid-template-columns:minmax(150px,210px) 1fr 110px;gap:12px;align-items:center;font-size:13.5px}
+.fun .bar{height:16px;background:var(--line2);border-radius:0 4px 4px 0;position:relative}
+.fun .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--mark);border-radius:0 4px 4px 0;min-width:2px}
+.fun .n{text-align:right;color:var(--ink2)}
+.fun .n b{color:var(--ink);font-weight:600}
+@media (max-width:600px){.fun li{grid-template-columns:1fr 96px}.fun .bar{grid-column:1/-1;grid-row:2}}
+
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .gl{stroke:var(--line);stroke-width:1}
+.chart .ax{fill:var(--ink3);font-size:11px}
+.chart .col{fill:var(--mark)}
+.chart .hit{fill:transparent;cursor:crosshair}
+.chart .col.hl{fill:var(--mark-d)}
+.tip{position:absolute;pointer-events:none;background:var(--dark);color:#fff;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.5;min-width:150px;transform:translate(-50%,-100%);margin-top:-10px;opacity:0;transition:opacity .12s;z-index:5;white-space:nowrap}
+.tip.on{opacity:1}
+.tip b{display:block;margin-bottom:3px}
+.tip span{display:flex;justify-content:space-between;gap:16px}
+.linkbtn{background:none;border:0;padding:0;color:var(--mark-d);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-size:13px}
+.tbl-mini{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:12px}
+.tbl-mini th,.tbl-mini td{text-align:right;padding:6px 8px;border-bottom:1px solid var(--line2)}
+.tbl-mini th:first-child,.tbl-mini td:first-child{text-align:left}
+
+.rank{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.rank li{display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:13.5px}
+.rank .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank .bar{grid-column:1/-1;height:6px;background:var(--line2);border-radius:3px;overflow:hidden}
+.rank .bar i{display:block;height:100%;background:var(--mark);border-radius:0 3px 3px 0}
+.empty{color:var(--ink3);font-size:13.5px;padding:8px 0}
+.kv{display:grid;grid-template-columns:1fr auto;gap:8px 14px;font-size:13.5px;margin:0}
+.kv dt{color:var(--ink2)}.kv dd{margin:0;text-align:right;font-weight:600}
+.kv dd small{font-weight:400;color:var(--ink3);margin-left:6px}
+
+.pill{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.pill.ok{background:var(--ok-bg);color:var(--ok)}.pill.bad{background:var(--bad-bg);color:var(--bad)}.pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.mut{background:var(--line2);color:var(--ink2)}
+.st-parcial{background:var(--warn-bg);color:var(--warn)}.st-novo{background:var(--info-bg);color:var(--info)}.st-contatado{background:#F1E6DA;color:#6B4A2E}.st-comprou{background:var(--ok-bg);color:var(--ok)}.st-perdido{background:var(--line2);color:var(--ink2)}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.filters input,.filters select{height:40px;border:1px solid var(--line);border-radius:10px;padding:0 12px;background:var(--card);min-width:0}
+.filters .q{flex:1 1 240px}
+@media (max-width:760px){.filters{display:grid;grid-template-columns:1fr 1fr}.filters .q{grid-column:1/-1}.filters input,.filters select{width:100%}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-weight:600;font-size:13.5px;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--gold)}
+.btn.pri{background:var(--dark);color:#fff;border-color:var(--dark)}
+.btn.pri:hover{background:var(--dark2)}
+.btn.wa{background:#2F6B45;color:#fff;border-color:#2F6B45;height:34px;padding:0 12px;font-size:12.5px}
+.btn.sm{height:34px;padding:0 12px;font-size:12.5px}
+.btn.danger{color:var(--bad);border-color:#F0C9C4}
+.btn svg{width:16px;height:16px}
+.btn:disabled{opacity:.45;cursor:default}
+.table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.table th{text-align:left;font-size:12px;font-weight:600;color:var(--ink2);padding:12px 14px;background:#FBF8F4;border-bottom:1px solid var(--line)}
+.table td{padding:12px 14px;border-bottom:1px solid var(--line2);vertical-align:top;font-size:13.5px}
+.table tr:last-child td{border-bottom:0}
+.who b{display:block;font-weight:600}
+.who small,.src small,.when small{display:block;color:var(--ink3);font-size:12px}
+.src{max-width:220px;overflow:hidden;text-overflow:ellipsis}
+.prod{display:inline-block;font-size:11.5px;font-weight:600;color:var(--mark-d);margin-top:4px}
+.st-sel{border:0;border-radius:999px;padding:5px 26px 5px 10px;font-size:12px;font-weight:600;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23432F2B' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:9px}
+.acts{display:flex;gap:6px;justify-content:flex-end}
+.pager{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;color:var(--ink2);font-size:13.5px}
+@media (max-width:820px){
+  .table thead{display:none}
+  .table,.table tbody,.table tr,.table td{display:block;width:100%}
+  .table tr{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .table td{border:0;padding:3px 0}
+  .table td:nth-child(4),.table td:nth-child(5){display:inline-block;width:auto;vertical-align:middle;margin-top:8px}
+  .table td:nth-child(4){margin-right:8px}
+  .acts{justify-content:flex-start}
+}
+
+.form{display:grid;gap:16px;max-width:900px}
+.fs{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.fs h2{font:500 24px/1.15 var(--serif);margin:0 0 4px}
+.fs > p{color:var(--ink3);font-size:13px;margin:0 0 16px}
+.row{display:grid;gap:6px;margin-bottom:14px;align-content:start}
+.row:last-child{margin-bottom:0}
+.row label{font-weight:600;font-size:13.5px}
+.row input[type=text],.row input[type=url],.row input[type=password],.row input[type=datetime-local],.row textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
+.row textarea{min-height:90px;resize:vertical}
+.row input:focus,.row textarea:focus{outline:none;border-color:var(--dark)}
+.row .help{color:var(--ink3);font-size:12.5px}
+.cols{display:grid;gap:14px}
+@media (min-width:700px){.cols{grid-template-columns:1fr 1fr}}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line2)}
+.chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--dark);flex:none}
+.chk b{display:block;font-weight:600;font-size:13.5px}
+.chk span{color:var(--ink3);font-size:12.5px}
+.copy{display:flex;gap:8px}
+.copy input{flex:1;font-family:ui-monospace,Menlo,monospace;font-size:12px!important;background:#FBF8F4!important}
+details.more{border-top:1px solid var(--line2);padding-top:10px;margin-top:6px}
+details.more summary{cursor:pointer;font-weight:600;font-size:13.5px;color:var(--ink2)}
+.savebar{position:sticky;bottom:16px;display:flex;gap:12px;align-items:center;background:var(--dark);color:#fff;border-radius:16px;padding:12px 14px 12px 20px;max-width:900px;box-shadow:0 10px 30px rgba(56,39,34,.25)}
+.savebar span{flex:1;font-size:13.5px;color:#E7DCD3}
+.savebar .btn{background:var(--cream);border-color:var(--cream);color:var(--dark)}
+.result{margin-top:10px;font-size:13.5px;border-radius:10px;padding:10px 12px;display:none}
+.result.on{display:block}.result.ok{background:var(--ok-bg);color:var(--ok)}.result.bad{background:var(--bad-bg);color:var(--bad)}
+
+dialog.drawer{margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(480px,100%);border:0;padding:0;background:var(--card);box-shadow:-20px 0 60px rgba(56,39,34,.2)}
+dialog.drawer::backdrop{background:rgba(56,39,34,.45)}
+.dr{padding:22px 24px 40px}
+.dr__top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}
+.dr h2{font:500 26px/1.15 var(--serif);margin:0}
+.dr dl{display:grid;grid-template-columns:120px 1fr;gap:8px 14px;margin:16px 0;font-size:13.5px}
+.dr dt{color:var(--ink3)}.dr dd{margin:0;word-break:break-word}
+.dr textarea{width:100%;min-height:110px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px}
+.x{width:36px;height:36px;border-radius:50%;border:0;background:var(--line2);cursor:pointer;flex:none}
+.confirm{display:none;margin-top:10px;padding:12px;border-radius:12px;background:var(--bad-bg);color:var(--bad);font-size:13.5px}
+.confirm.on{display:block}
+
+.toasts{position:fixed;right:16px;bottom:16px;display:grid;gap:10px;z-index:50;width:min(340px,calc(100% - 32px))}
+.toast{background:var(--dark);color:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px rgba(56,39,34,.3);font-size:13.5px;animation:tin .3s ease}
+.toast b{display:block;color:var(--gold-l);font-size:12px;font-weight:600;margin-bottom:2px}
+@keyframes tin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="login" id="loginView" hidden>
+  <form id="loginForm" autocomplete="on">
+    <img src="/assets/instituto/01-imagem.webp" alt="" width="41" height="52">
+    <h1>Instituto Cris Prado</h1>
+    <p>Painel de leads e campanhas</p>
+    <p class="setup" id="setupMsg" hidden>Antes de entrar, defina as variáveis ADMIN_PASSWORD, APP_SECRET e DATABASE_URL no Vercel (Settings &gt; Environment Variables) e faça um novo deploy.</p>
+    <label for="pw">Senha</label>
+    <input id="pw" name="password" type="password" autocomplete="current-password" required>
+    <p class="e" id="loginErr" role="alert" hidden></p>
+    <button class="btn pri" style="width:100%;height:48px;margin-top:16px" type="submit">Entrar</button>
+  </form>
+</div>
+
+<div id="app" hidden>
+<header class="top">
+  <div class="top__in">
+    <a class="brand" href="/" target="_blank" rel="noopener"><img src="/assets/instituto/01-imagem.webp" alt="" width="26" height="33"><b>Cris Prado</b><span>Painel</span></a>
+    <nav class="tabs" aria-label="Seções">
+      <a href="#visao" data-tab="visao">Visão geral</a>
+      <a href="#leads" data-tab="leads">Leads</a>
+      <a href="#config" data-tab="config">Configurações</a>
+    </nav>
+    <div class="top__r">
+      <label class="sr" for="prodSel">Página</label>
+      <select id="prodSel"></select>
+      <span class="live">Ao vivo</span>
+      <button type="button" class="link" id="logout">Sair</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="view" id="v-visao" aria-labelledby="t-visao">
+    <div class="head">
+      <h1 id="t-visao">Visão geral <small id="prodLabel"></small></h1>
+      <div class="range">
+        <div class="seg" id="seg" role="group" aria-label="Período">
+          <button type="button" data-days="1">Hoje</button>
+          <button type="button" data-days="7">7 dias</button>
+          <button type="button" data-days="30" aria-pressed="true">30 dias</button>
+          <button type="button" data-days="90">90 dias</button>
+        </div>
+        <label class="sr" for="d-from">De</label><input type="date" id="d-from">
+        <label class="sr" for="d-to">Até</label><input type="date" id="d-to">
+      </div>
+    </div>
+    <div id="warn"></div>
+    <div class="grid tiles" id="tiles"></div>
+    <div class="grid two mt">
+      <div class="card">
+        <h2>Funil da página</h2>
+        <p class="sub">Pessoas únicas por sessão em cada etapa, em relação às visitas.</p>
+        <ol class="fun" id="fun"></ol>
+      </div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+          <h2 id="chartTitle">Leads por dia</h2>
+          <button type="button" class="linkbtn" id="tblToggle" aria-expanded="false">Ver tabela</button>
+        </div>
+        <p class="sub" id="chartSub">Formulários enviados. Passe o mouse para ver os outros números do dia.</p>
+        <div class="chart" id="chart"><div class="tip" id="tip" role="status"></div></div>
+        <div id="tbl" hidden></div>
+      </div>
+    </div>
+    <div class="grid three mt">
+      <div class="card" id="srcCard"><h2>Origem dos leads</h2><p class="sub">utm_source</p><ul class="rank" id="sources"></ul></div>
+      <div class="card" id="campCard"><h2>Campanhas</h2><p class="sub">utm_campaign</p><ul class="rank" id="campaigns"></ul></div>
+      <div class="card"><h2>Engajamento</h2><p class="sub">Em relação às visitas do período.</p><dl class="kv" id="eng"></dl></div>
+    </div>
+    <div class="card mt" id="capiCard"></div>
+  </section>
+
+  <section class="view" id="v-leads" aria-labelledby="t-leads">
+    <div class="head">
+      <h1 id="t-leads">Leads <small id="prodLabel2"></small></h1>
+      <a class="btn" id="exportBtn" href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg>Exportar CSV</a>
+    </div>
+    <div class="filters">
+      <label class="sr" for="f-q">Buscar</label><input class="q" id="f-q" type="search" placeholder="Buscar por nome, e-mail ou WhatsApp">
+      <label class="sr" for="f-status">Status</label>
+      <select id="f-status"><option value="">Todos os status</option><option value="parcial">Parciais</option><option value="novo">Novos</option><option value="contatado">Em contato</option><option value="comprou">Compraram</option><option value="perdido">Não compraram</option></select>
+      <label class="sr" for="f-source">Origem</label><select id="f-source"><option value="">Todas as origens</option></select>
+      <label class="sr" for="f-campaign">Campanha</label><select id="f-campaign"><option value="">Todas as campanhas</option></select>
+      <label class="sr" for="f-from">De</label><input type="date" id="f-from">
+      <label class="sr" for="f-to">Até</label><input type="date" id="f-to">
+      <button type="button" class="btn" id="f-clear">Limpar</button>
+    </div>
+    <table class="table">
+      <thead><tr><th>Recebido</th><th>Nome e contato</th><th>Origem</th><th>Status</th><th><span class="sr">Ações</span></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="pager"><span id="pinfo"></span><span><button type="button" class="btn sm" id="prev">Anterior</button> <button type="button" class="btn sm" id="next">Próxima</button></span></div>
+  </section>
+
+  <section class="view" id="v-config" aria-labelledby="t-config">
+    <div class="head"><h1 id="t-config">Configurações</h1></div>
+    <div class="form">
+      <form class="fs" id="gForm" autocomplete="off">
+        <h2>Meta Ads: Pixel e API de Conversões</h2>
+        <p>Vale para todas as páginas (Instituto e cursos). Os eventos saem do navegador e do servidor com o mesmo ID e a Meta remove as duplicatas.</p>
+        <div class="cols">
+          <div class="row"><label for="g-pixel">ID do Pixel (conjunto de dados)</label><input type="text" id="g-pixel" name="pixel_id" inputmode="numeric" placeholder="1234567890123456"></div>
+          <div class="row"><label for="g-test">Código de teste</label><input type="text" id="g-test" name="capi_test_code" placeholder="TEST12345"><span class="help">Só para validar no Gerenciador de Eventos. Apague depois.</span></div>
+        </div>
+        <div class="row"><label for="g-token">Token de acesso da API de Conversões</label><input type="password" id="g-token" name="capi_token" placeholder="Cole o token do Gerenciador de Eventos"><span class="help">Gerenciador de Eventos &gt; conjunto de dados &gt; Configurações &gt; API de Conversões &gt; Gerar token de acesso.</span></div>
+        <label class="chk"><input type="checkbox" name="capi_enabled"><div><b>Enviar eventos pela API de Conversões</b><span>PageView, ViewContent, rolagem, tempo, cliques, vídeo, oferta, formulário, Lead, InitiateCheckout e Contact (WhatsApp na página principal).</span></div></label>
+        <label class="chk"><input type="checkbox" name="capi_purchase"><div><b>Enviar Purchase quando o webhook confirmar o pagamento</b><span>Deixe desligado se o checkout já envia Purchase para este mesmo Pixel.</span></div></label>
+        <label class="chk"><input type="checkbox" name="notify_sound"><div><b>Som quando chegar lead novo</b><span>Toca com o painel aberto.</span></div></label>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px">
+          <button type="submit" class="btn pri">Salvar Meta Ads</button>
+          <button type="button" class="btn" id="capiTest">Testar conexão com a Meta</button>
+          <span class="help" id="gMsg" style="color:var(--ink3);font-size:12.5px"></span>
+        </div>
+        <div class="result" id="capiRes" role="status"></div>
+      </form>
+      <div id="courseForms"></div>
+      <div class="fs"><h2>Sistema</h2><dl class="kv" id="sys"></dl></div>
+    </div>
+  </section>
+</main>
+</div>
+
+<dialog class="drawer" id="drawer" aria-labelledby="dr-t"><div class="dr" id="dr"></div></dialog>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="/admin/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transforme Faces com Fios | Formação com fios e método Vertical Lifting, por Cris Prado</title>
+<meta name="description" content="Formação da Cris Prado para trabalhar com fios: planejamento, anatomia, marcação, vetores e o método exclusivo Vertical Lifting, com visão comercial para a sua clínica.">
+<link rel="canonical" href="https://institutocrisprado.com.br/transforme-faces-com-fios/">
+<meta name="theme-color" content="#382722">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%23432F2B%27/%3E%3Cpath d=%27M16 25V8M11 13l5-5 5 5%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%272.2%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Transforme Faces com Fios, por Cris Prado">
+<meta property="og:description" content="O problema está nos fios ou na forma como você aprendeu a usá-los?">
+<meta property="og:image" content="https://institutocrisprado.com.br/transforme-faces-com-fios/assets/img/video-poster.jpg">
+<link rel="preload" href="/transforme-faces-com-fios/assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net">
+<style>
+@font-face{font-family:"Mona Sans";src:url(/transforme-faces-com-fios/assets/fonts/mona-sans.woff2) format("woff2");font-weight:200 900;font-stretch:75% 125%;font-style:normal;font-display:swap}
+
+:root{
+  --ink:#382722;
+  --ink-2:#74645E;
+  --ink-3:#7D6C64;
+  --btn:#432F2B;
+  --btn-2:#5A4037;
+  --violet:#916B55;
+  --violet-2:#7A5847;
+  --lilac:#F1E7E1;
+  --lilac-2:#D8BD97;
+  --porcelain:#FBF8F4;
+  --white:#FFFDFB;
+  --blush:#D8BD97;
+  --on-dark:#FBF8F4;
+  --on-dark-2:#D7CAC1;
+  --line:rgba(67,47,43,.14);
+  --line-dark:rgba(216,189,151,.26);
+  --font:"Mona Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1200px;
+  --pad:clamp(20px,5vw,44px);
+  --section:clamp(80px,11vw,150px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--porcelain);color:var(--ink);font:400 17px/1.62 var(--font);-webkit-font-smoothing:antialiased}
+@media (min-width:900px){body{font-size:18px}}
+img,svg,video{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+p{margin:0 0 1em;text-wrap:pretty}
+p:last-child{margin-bottom:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:4px}
+.dark :focus-visible{outline-color:var(--lilac-2)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Type system: condensed = headlines (the "vertical" voice), expanded = small labels */
+h1,h2,h3{margin:0;font-family:var(--font);text-wrap:balance}
+.display{font-stretch:75%;font-weight:780;letter-spacing:-.012em}
+.h2{font-stretch:75%;font-weight:740;font-size:clamp(2.2rem,5vw,3.9rem);line-height:1;letter-spacing:-.01em}
+.h3{font-stretch:82%;font-weight:700;font-size:clamp(1.35rem,2vw,1.6rem);line-height:1.12}
+.label{font-stretch:115%;font-weight:560;font-size:14px;line-height:1.35;letter-spacing:.005em;color:var(--violet);margin:0 0 18px}
+.dark .label{color:var(--lilac-2)}
+.lead{font-size:clamp(1.08rem,1.5vw,1.22rem);line-height:1.6;color:var(--ink-2);max-width:58ch}
+.dark .lead{color:var(--on-dark-2)}
+.muted{color:var(--ink-2)}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.section{padding:var(--section) 0}
+.dark{background:var(--ink);color:var(--on-dark)}
+.tint{background:var(--lilac)}
+
+/* Buttons: tall, square-shouldered, a short rule rises on hover */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:60px;padding:0 30px;border:0;border-radius:10px;cursor:pointer;font:600 17px/1.2 var(--font);font-stretch:96%;text-decoration:none;transition:background-color .2s ease,transform .15s ease}
+.btn:active{transform:translateY(1px)}
+.btn--violet{background:var(--btn);color:#fff}
+.btn--violet:hover{background:var(--btn-2)}
+.btn--light{background:var(--lilac-2);color:var(--ink)}
+.btn--light:hover{background:#E6D2B4}
+.btn--wide{width:100%}
+@media (max-width:560px){.btn{width:100%;padding:0 20px}}
+
+/* Campaign strip */
+.promo{background:var(--blush);color:var(--ink);font-size:14.5px;font-weight:600;font-stretch:100%}
+.promo[hidden]{display:none}
+.promo__in{display:flex;align-items:center;justify-content:center;gap:8px 18px;flex-wrap:wrap;min-height:44px;padding-top:8px;padding-bottom:8px;text-align:center}
+.clock{display:inline-flex;gap:6px;font-variant-numeric:tabular-nums;font-stretch:90%;font-weight:700}
+.clock[hidden]{display:none}
+.clock span{background:var(--ink);color:#fff;border-radius:6px;padding:2px 7px;min-width:40px;text-align:center}
+
+/* Header */
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px;border-bottom:1px solid var(--line)}
+.mark{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.mark b{font-stretch:75%;font-weight:800;font-size:23px;letter-spacing:-.01em}
+.mark span{font-stretch:115%;font-size:12.5px;color:var(--ink-3);margin-top:5px}
+.top__cta{min-height:44px;padding:0 18px;font-size:15px;border-radius:8px}
+@media (max-width:640px){.top__cta{display:none}.top__in{height:66px}}
+
+/* Hero */
+.hero{padding:clamp(32px,4.5vw,60px) 0 clamp(64px,9vw,120px)}
+.hero__grid{display:grid;gap:44px;align-items:center}
+@media (min-width:980px){.hero__grid{grid-template-columns:1.08fr .92fr;gap:64px}}
+.hero h1{font-size:clamp(2.9rem,6.2vw,4.75rem);line-height:.96}
+.hero__lead{margin:28px 0 34px;max-width:52ch;color:var(--ink-2);font-size:clamp(1.06rem,1.5vw,1.2rem)}
+.facts{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:10px;font-size:15.5px;color:var(--ink-2)}
+.facts li{display:flex;gap:10px;align-items:center}
+.facts li::before{content:"";flex:none;width:2px;height:16px;background:var(--violet);border-radius:2px}
+
+.threads{position:relative;margin:0;background:var(--lilac);border-radius:28px;padding:28px 18px 20px;overflow:hidden}
+.threads::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(145,107,85,.22) 1.2px,transparent 1.3px);background-size:22px 22px;-webkit-mask-image:linear-gradient(transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(transparent,#000 30%,#000 70%,transparent)}
+.threads svg{position:relative;width:100%;max-width:420px;height:auto;margin:0 auto}
+@media (max-width:979px){.threads svg{max-height:420px}}
+@media (min-width:980px){.threads svg{max-height:560px}}
+.threads .th{fill:none;stroke:var(--violet);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.threads .barb{fill:none;stroke:var(--violet);stroke-width:2;stroke-linecap:round}
+.threads .arrow{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.threads .entry{fill:var(--lilac);stroke:var(--ink);stroke-width:2}
+.threads .base{stroke:var(--ink);stroke-width:1;stroke-dasharray:2 6;opacity:.45}
+.threads .t{font:600 17px var(--font);font-stretch:115%;fill:var(--ink);text-anchor:middle}
+.threads .tc{font:500 15px var(--font);font-stretch:115%;fill:var(--ink-2);text-anchor:middle}
+.threads figcaption{position:relative;text-align:center;font-size:14px;color:var(--ink-2);margin-top:4px}
+.threads .th{stroke-dasharray:1;stroke-dashoffset:1}
+.threads .barb,.threads .arrow,.threads .labels{opacity:0}
+.is-ready .threads .th{animation:draw 1.7s cubic-bezier(.6,.05,.25,1) forwards}
+.is-ready .threads .th2{animation-delay:.18s}
+.is-ready .threads .th3{animation-delay:.36s}
+.is-ready .threads .barb{animation:fade .7s 1.5s ease forwards}
+.is-ready .threads .arrow{animation:rise .7s 1.7s cubic-bezier(.2,.8,.2,1) forwards}
+.is-ready .threads .labels{animation:fade .8s 2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* Watch */
+.watch__grid{display:grid;gap:40px;align-items:center}
+@media (min-width:900px){.watch__grid{grid-template-columns:400px 1fr;gap:88px}}
+.player{position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--ink);box-shadow:0 30px 60px -30px rgba(56,39,34,.5)}
+.player video{width:100%;height:100%;object-fit:cover}
+.player__sound{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:10px;border:0;background:var(--btn);color:#fff;font:600 15px/1 var(--font);cursor:pointer;white-space:nowrap}
+.player__sound svg{width:18px;height:18px}
+.player__sound[data-state="on"]{background:rgba(56,39,34,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.watch .h2{max-width:16ch}
+.watch p.lead{margin-top:22px}
+.watch__note{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--ink-2);max-width:48ch}
+@media (max-width:899px){.watch__copy{order:-1}}
+
+/* Pain: two questions */
+.ask__grid{display:grid;gap:0;margin-top:clamp(36px,5vw,56px);border-top:1px solid var(--line)}
+@media (min-width:860px){.ask__grid{grid-template-columns:1fr 1fr}}
+.ask{padding:34px 0}
+@media (min-width:860px){.ask{padding:44px 48px 44px 0}.ask+.ask{padding-left:48px;border-left:1px solid var(--line)}}
+@media (max-width:859px){.ask+.ask{border-top:1px solid var(--line)}}
+.ask p{font-stretch:80%;font-weight:640;font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.15;margin:0;max-width:22ch}
+.turn{display:grid;gap:28px;margin-top:clamp(48px,7vw,84px);padding-top:clamp(36px,5vw,52px);border-top:1px solid var(--line)}
+@media (min-width:900px){.turn{grid-template-columns:.9fr 1.1fr;gap:80px;align-items:end}}
+.turn .h2{font-size:clamp(2rem,4.2vw,3.3rem)}
+.turn .h2 em{font-style:normal}
+
+/* Method */
+.method__head{display:grid;gap:24px;max-width:900px}
+.pillars{list-style:none;margin:clamp(44px,6vw,72px) 0 0;padding:0;display:grid;gap:0}
+@media (min-width:860px){.pillars{grid-template-columns:repeat(3,1fr)}}
+.pillar{position:relative;padding:28px 0 28px 26px;border-left:2px solid var(--lilac-2)}
+@media (min-width:860px){.pillar{padding:8px 36px 8px 28px}}
+@media (max-width:859px){.pillar+.pillar{margin-top:6px}}
+.pillar .h3{margin-bottom:10px;color:#fff}
+.pillar p{color:var(--on-dark-2);font-size:16.5px;margin:0}
+.method__out{display:grid;gap:22px;margin-top:clamp(48px,6vw,72px);padding-top:clamp(32px,4vw,44px);border-top:1px solid var(--line-dark)}
+@media (min-width:900px){.method__out{grid-template-columns:1fr auto;align-items:center;gap:60px}}
+.method__out p{font-stretch:80%;font-weight:650;font-size:clamp(1.45rem,2.6vw,2.05rem);line-height:1.15;margin:0;max-width:30ch}
+.vl{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--line-dark);border-radius:14px;padding:14px 18px}
+.vl svg{width:22px;height:34px;flex:none}
+.vl b{display:block;font-stretch:75%;font-weight:800;font-size:22px;line-height:1}
+.vl span{font-stretch:115%;font-size:13px;color:var(--on-dark-2)}
+
+/* Value insight */
+.value__grid{display:grid;gap:28px}
+@media (min-width:900px){.value__grid{grid-template-columns:1.2fr .8fr;gap:80px;align-items:end}}
+.value .h2{font-size:clamp(2.3rem,5.6vw,4.6rem);max-width:15ch}
+.value p.lead{max-width:40ch}
+
+/* Imagine: consultation sequence */
+.imagine__head{display:grid;gap:22px;max-width:860px}
+.steps{list-style:none;margin:clamp(40px,6vw,64px) 0 0;padding:0;display:grid;gap:12px;counter-reset:s}
+@media (min-width:980px){.steps{grid-template-columns:repeat(5,1fr);gap:14px}}
+.step{background:var(--porcelain);border-radius:16px;padding:22px 20px 24px;display:flex;flex-direction:column;gap:22px;min-height:100%}
+@media (max-width:979px){.step{flex-direction:row;align-items:baseline;gap:16px;padding:18px 18px}}
+.step__n{font-stretch:75%;font-weight:800;font-size:34px;line-height:1;color:var(--violet);font-variant-numeric:lining-nums}
+@media (max-width:979px){.step__n{font-size:26px;min-width:26px}}
+.step p{margin:0;font-weight:560;font-size:16.5px;line-height:1.35}
+.imagine__foot{margin-top:clamp(36px,5vw,52px);max-width:62ch;color:var(--ink-2)}
+
+/* Curriculum: a rising thread connects the modules */
+.curr__grid{display:grid;gap:40px}
+@media (min-width:980px){.curr__grid{grid-template-columns:.8fr 1.2fr;gap:88px}.curr__head{position:sticky;top:40px;align-self:start}}
+.mods{list-style:none;margin:0;padding:0;position:relative}
+.mods::before{content:"";position:absolute;left:11px;top:10px;bottom:10px;width:2px;background:var(--violet);border-radius:2px}
+.mod{position:relative;padding:0 0 34px 54px}
+.mod:last-child{padding-bottom:0}
+.mod::before{content:"";position:absolute;left:4px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--porcelain);border:2px solid var(--violet)}
+.mod.is-method::before{background:var(--violet)}
+.mod .h3{margin-bottom:6px}
+.mod p{margin:0;color:var(--ink-2);max-width:52ch}
+.mod.is-method{padding-top:22px;padding-bottom:56px}
+.mod.is-method::before{top:30px}
+.mod.is-method .h3{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--violet)}
+.mods__cap{position:absolute;left:0;top:-30px;font-stretch:115%;font-size:13px;color:var(--ink-3)}
+
+/* Statement band */
+.say{padding:clamp(72px,10vw,120px) 0}
+.say p{font-stretch:75%;font-weight:760;font-size:clamp(2.1rem,5.2vw,4.2rem);line-height:1.02;letter-spacing:-.01em;max-width:20ch;margin:0}
+.say p + p{margin-top:18px;color:var(--lilac-2)}
+
+/* Audience */
+.aud__grid{display:grid;gap:16px;margin-top:clamp(40px,6vw,60px)}
+@media (min-width:860px){.aud__grid{grid-template-columns:1fr 1fr}}
+.who{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3.5vw,40px)}
+.who .h3{margin-bottom:12px;max-width:24ch}
+.who p{color:var(--ink-2);margin:0}
+.note{margin-top:22px;padding:16px 20px;border-left:2px solid var(--violet);background:var(--lilac);font-size:15px;line-height:1.55;color:var(--ink-2);max-width:78ch;border-radius:0 10px 10px 0}
+
+/* Teacher */
+.teacher__grid{display:grid;gap:44px;align-items:center}
+@media (min-width:900px){.teacher__grid{grid-template-columns:440px 1fr;gap:88px}}
+.teacher__photo{margin:0;max-width:440px;position:relative}
+.teacher__photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:24px}
+.teacher__photo figcaption{font-size:13.5px;color:var(--ink-3);margin-top:10px;font-stretch:110%}
+@media (max-width:899px){.teacher__photo{max-width:360px}}
+.teacher h2{font-size:clamp(3rem,7vw,5.4rem);line-height:.92}
+.teacher__creds{font-stretch:85%;font-weight:620;font-size:clamp(1.25rem,2vw,1.55rem);line-height:1.3;margin:22px 0 26px;max-width:34ch}
+.teacher__body{color:var(--ink-2);max-width:54ch}
+
+/* Offer */
+.offer__grid{display:grid;gap:44px}
+@media (min-width:980px){.offer__grid{grid-template-columns:1fr 460px;gap:72px;align-items:start}}
+.offer .h2{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+.offer .lead{margin-top:24px}
+.incl{list-style:none;margin:36px 0 0;padding:0}
+.incl li{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-top:1px solid var(--line-dark);color:var(--on-dark)}
+.incl li:last-child{border-bottom:1px solid var(--line-dark)}
+.incl svg{flex:none;width:12px;height:22px;margin-top:2px}
+.card{background:var(--porcelain);color:var(--ink);border-radius:24px;padding:clamp(26px,3.5vw,38px)}
+.card__tag{display:inline-flex;align-items:center;gap:8px;background:var(--blush);color:var(--ink);font-weight:650;font-size:14px;font-stretch:105%;border-radius:8px;padding:7px 12px;margin-bottom:18px}
+.card__tag[hidden]{display:none}
+.card__name{font-stretch:80%;font-weight:720;font-size:1.5rem;line-height:1.1;margin:0 0 18px}
+.from{color:var(--ink-3);font-size:16px;margin:0}
+.from s{text-decoration-thickness:1.5px}
+.price{font-stretch:75%;font-weight:800;font-size:clamp(3.6rem,8vw,5rem);line-height:1;letter-spacing:-.02em;margin:4px 0 0;font-variant-numeric:lining-nums}
+.price .cents{vertical-align:1.6em;margin-left:4px}
+.price small{font-size:.36em;font-stretch:90%;font-weight:700;margin-right:6px;vertical-align:.95em;letter-spacing:0}
+.inst{font-size:17px;font-weight:560;margin:10px 0 0;color:var(--ink-2)}
+.noprice{font-stretch:80%;font-weight:700;font-size:1.9rem;line-height:1.1;margin:0}
+.card .btn{margin-top:26px}
+.card__clock{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink-2)}
+.card__clock[hidden]{display:none}
+.card__safe{font-size:13.5px;line-height:1.5;color:var(--ink-3);margin-top:16px}
+
+/* Close: two paths */
+.close .h2{max-width:20ch}
+.paths{display:grid;gap:16px;margin-top:clamp(40px,6vw,60px)}
+@media (min-width:860px){.paths{grid-template-columns:1fr 1fr}}
+.path{border-radius:20px;padding:clamp(24px,3.2vw,36px);border:1px solid var(--line)}
+.path span{display:block;font-stretch:115%;font-size:13.5px;font-weight:560;margin-bottom:14px;color:var(--ink-3)}
+.path p{font-stretch:82%;font-weight:650;font-size:clamp(1.3rem,2.1vw,1.65rem);line-height:1.2;margin:0}
+.path--yes{background:var(--btn);border-color:var(--btn);color:#fff}
+.path--yes span{color:var(--lilac-2)}
+.close__row{display:grid;gap:30px;margin-top:clamp(44px,6vw,64px);align-items:center}
+@media (min-width:900px){.close__row{grid-template-columns:1fr auto;gap:60px}}
+.close__row p{font-size:clamp(1.1rem,1.6vw,1.25rem);color:var(--ink-2);margin:0;max-width:50ch}
+
+/* FAQ */
+.faq__grid{display:grid;gap:36px}
+@media (min-width:900px){.faq__grid{grid-template-columns:.7fr 1.3fr;gap:80px}}
+.faq__list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font-stretch:85%;font-weight:680;font-size:clamp(1.12rem,1.7vw,1.3rem);line-height:1.25}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;margin-top:5px;background:linear-gradient(var(--violet),var(--violet)) center/14px 2px no-repeat,linear-gradient(var(--violet),var(--violet)) center/2px 14px no-repeat;transition:transform .25s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 0 26px;color:var(--ink-2);max-width:62ch}
+
+/* Footer */
+.foot{background:#2C1E1A;color:var(--on-dark-2);font-size:14px;line-height:1.6;padding:52px 0 calc(52px + env(safe-area-inset-bottom))}
+.foot__grid{display:grid;gap:24px}
+@media (min-width:900px){.foot__grid{grid-template-columns:auto 1fr;gap:80px}}
+.foot .mark b{color:#fff}
+.foot .mark span{color:var(--on-dark-2)}
+.foot p{max-width:82ch}
+.foot nav{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px}
+.foot nav a,.foot nav button{background:none;border:0;padding:0;cursor:pointer;color:var(--lilac-2);text-decoration:underline;text-underline-offset:3px;font-size:14px}
+@media (max-width:899px){.foot{padding-bottom:calc(112px + env(safe-area-inset-bottom))}}
+
+/* Sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(56,39,34,.97);color:#fff;border-top:1px solid var(--line-dark);padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:14px;transform:translateY(110%);transition:transform .3s ease;visibility:hidden}
+.bar.is-on{transform:none;visibility:visible}
+.bar__info{line-height:1.2;min-width:0}
+.bar__info b{display:block;font-stretch:75%;font-weight:800;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar__info span{font-size:13.5px;color:var(--lilac-2);font-variant-numeric:tabular-nums}
+.bar .btn{width:auto;min-height:50px;padding:0 20px;font-size:16px;white-space:nowrap}
+@media (min-width:900px){.bar{display:none}}
+
+/* Lead dialog */
+.lead-dlg{width:min(520px,100%);max-width:100%;max-height:100dvh;margin:auto;padding:0;border:0;border-radius:22px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(44,30,26,.45)}
+.lead-dlg::backdrop{background:rgba(44,30,26,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.lead-dlg[open]{animation:dlg-in .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes dlg-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (max-width:560px){.lead-dlg{margin:auto 0 0;width:100%;border-radius:22px 22px 0 0}.lead-dlg[open]{animation:sheet-in .32s cubic-bezier(.2,.8,.2,1)}@keyframes sheet-in{from{transform:translateY(100%)}to{transform:none}}}
+.dlg__in{padding:28px clamp(22px,5vw,34px) calc(26px + env(safe-area-inset-bottom))}
+.dlg__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.stepper{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-3);list-style:none;margin:0;padding:0}
+.stepper li{display:flex;align-items:center;gap:8px}
+.stepper i{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;font:700 12px/1 var(--font);font-style:normal;border:1.5px solid var(--lilac-2)}
+.stepper li.on i{background:var(--violet);border-color:var(--violet);color:#fff}
+.stepper li.on{color:var(--ink);font-weight:600}
+.stepper .sep{width:22px;height:1.5px;background:var(--lilac-2)}
+.x{width:40px;height:40px;border-radius:10px;border:0;background:var(--porcelain);cursor:pointer;display:grid;place-items:center}
+.x svg{width:14px;height:14px}
+.dlg__title{font-stretch:75%;font-weight:780;font-size:clamp(1.9rem,5vw,2.3rem);line-height:1;margin-bottom:10px}
+.dlg__sub{color:var(--ink-2);font-size:16px;margin-bottom:22px}
+.field{margin-bottom:14px}
+.field label{display:block;font:600 14px/1.3 var(--font);margin-bottom:7px}
+.field input{width:100%;height:54px;padding:0 16px;border-radius:10px;border:1.5px solid #DFD4CB;background:#fff;color:var(--ink);font:400 17px/1 var(--font);transition:border-color .15s ease,box-shadow .15s ease;-webkit-appearance:none;appearance:none}
+.field input:focus{outline:none;border-color:var(--violet);box-shadow:0 0 0 4px rgba(145,107,85,.15)}
+.field.bad input{border-color:#B3261E}
+.err{display:none;color:#9C2019;font-size:14px;margin-top:6px}
+.field.bad .err{display:block}
+.hint{display:none;font-size:14px;margin-top:6px;color:var(--ink-2)}
+.hint button{background:none;border:0;padding:0;color:var(--violet);font-weight:650;text-decoration:underline;cursor:pointer}
+.hint.on{display:block}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.dlg__btn{margin-top:8px}
+.dlg__btn[aria-busy="true"]{pointer-events:none;opacity:.85}
+.spin{width:18px;height:18px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:spin .7s linear infinite;display:none}
+.dlg__btn[aria-busy="true"] .spin{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dlg__safe{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--ink-2);margin-top:16px}
+.dlg__safe svg{flex:none;width:16px;height:16px;margin-top:2px}
+.dlg__err{display:none;margin-top:12px;padding:12px 14px;border-radius:10px;background:#F7E1DE;color:#7A1C16;font-size:14.5px}
+.dlg__err.on{display:block}
+.priv-dlg{width:min(680px,calc(100% - 32px));max-height:85dvh;border:0;border-radius:20px;padding:0;background:#fff;color:var(--ink)}
+.priv-dlg::backdrop{background:rgba(44,30,26,.72)}
+.priv-dlg .dlg__in{padding:30px}
+.priv-dlg h2{font-stretch:75%;font-weight:780;font-size:2rem}
+.priv-dlg h3{font:650 16px/1.4 var(--font);margin:20px 0 6px}
+.priv-dlg p{font-size:15px;color:var(--ink-2)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
+  .threads .th{stroke-dashoffset:0}
+  .threads .barb,.threads .arrow,.threads .labels{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="promo" id="promo" hidden>
+  <div class="wrap promo__in"><span id="promoText"></span><span class="clock" id="clockTop" data-clock hidden aria-label="Tempo restante"></span></div>
+</div>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="mark" href="/" aria-label="Transforme Faces com Fios, por Cris Prado. Voltar ao Instituto Cris Prado"><b>Transforme Faces com Fios</b><span>por Cris Prado</span></a>
+    <button type="button" class="btn btn--violet top__cta js-cta" data-pos="topo">Garantir minha vaga</button>
+  </div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="hero" id="topo">
+  <div class="wrap hero__grid">
+    <div>
+      <h1 class="display">O problema está nos fios ou na forma como você aprendeu a usá&#8209;los?</h1>
+      <p class="hero__lead">No Transforme Faces com Fios, a Cris Prado ensina do planejamento à marcação e aos vetores, até chegar ao seu método exclusivo, o Vertical Lifting. Uma formação para trabalhar com fios com mais segurança e confiança, e para saber apresentar o valor do que você entrega.</p>
+      <button type="button" class="btn btn--violet js-cta" data-pos="hero" id="heroCta">Quero conhecer a condição especial</button>
+      <ul class="facts" aria-label="Sobre a formação">
+        <li>Planejamento, anatomia, marcação e vetores</li>
+        <li>Método Vertical Lifting</li>
+        <li>Visão comercial para a clínica</li>
+      </ul>
+    </div>
+    <figure class="threads" aria-hidden="true">
+      <svg viewBox="0 0 420 580" role="presentation">
+        <path class="base" d="M40 480 H380"/>
+        <path class="th th1" pathLength="1" d="M110 480 V120"/>
+        <path class="th th2" pathLength="1" d="M210,480 C229.9,477.3 229.9,464.7 210,462 C190.1,459.3 190.1,446.7 210,444 C229.9,441.3 229.9,428.7 210,426 C190.1,423.3 190.1,410.7 210,408 C229.9,405.3 229.9,392.7 210,390 C190.1,387.3 190.1,374.7 210,372 C229.9,369.3 229.9,356.7 210,354 C190.1,351.3 190.1,338.7 210,336 C229.9,333.3 229.9,320.7 210,318 C190.1,315.3 190.1,302.7 210,300 C229.9,297.3 229.9,284.7 210,282 C190.1,279.3 190.1,266.7 210,264 C229.9,261.3 229.9,248.7 210,246 C190.1,243.3 190.1,230.7 210,228 C229.9,225.3 229.9,212.7 210,210 C190.1,207.3 190.1,194.7 210,192 C229.9,189.3 229.9,176.7 210,174 C190.1,171.3 190.1,158.7 210,156 C229.9,153.3 229.9,140.7 210,138 C190.1,135.3 190.1,122.7 210,120"/>
+        <path class="th th3" pathLength="1" d="M310 480 V120"/>
+        <path class="barb" d="M310 452 l-12 14 M310 452 l12 14 M310 428 l-12 14 M310 428 l12 14 M310 404 l-12 14 M310 404 l12 14 M310 380 l-12 14 M310 380 l12 14 M310 356 l-12 14 M310 356 l12 14 M310 332 l-12 14 M310 332 l12 14 M310 308 l-12 14 M310 308 l12 14 M310 284 l-12 14 M310 284 l12 14 M310 260 l-12 14 M310 260 l12 14 M310 236 l-12 14 M310 236 l12 14 M310 212 l-12 14 M310 212 l12 14 M310 188 l-12 14 M310 188 l12 14 M310 164 l-12 14 M310 164 l12 14"/>
+        <g class="arrow">
+          <path d="M110 108 V70 M100 82 L110 70 L120 82"/>
+          <path d="M210 108 V70 M200 82 L210 70 L220 82"/>
+          <path d="M310 108 V70 M300 82 L310 70 L320 82"/>
+        </g>
+        <g class="labels">
+          <text class="tc" x="210" y="44">Vetor de tração</text>
+          <circle class="entry" cx="110" cy="480" r="7"/>
+          <circle class="entry" cx="210" cy="480" r="7"/>
+          <circle class="entry" cx="310" cy="480" r="7"/>
+          <text class="t" x="110" y="522">Liso</text>
+          <text class="t" x="210" y="522">Espiral</text>
+          <text class="t" x="310" y="522">Espiculado</text>
+          <text class="tc" x="210" y="562">Pontos de entrada</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- Vídeo da Cris -->
+<section class="section tint watch" aria-labelledby="watch-t">
+  <div class="wrap watch__grid">
+    <div class="player" id="player">
+      <video id="vsl" playsinline muted loop preload="none" poster="/transforme-faces-com-fios/assets/img/video-poster.jpg" aria-label="Vídeo da Cris Prado apresentando o Transforme Faces com Fios">
+        <source data-src="/transforme-faces-com-fios/assets/video/cris-transforme-faces.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="player__sound" id="soundBtn" data-state="off">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        <span>Ouvir do início</span>
+      </button>
+    </div>
+    <div class="watch__copy">
+      <p class="label">Assista antes de continuar</p>
+      <h2 class="h2" id="watch-t">Em pouco mais de 2 minutos, a Cris explica o que muda quando você entende os fios de verdade.</h2>
+      <p class="lead">Por que tantos profissionais desistem dos fios, o que está por trás do método Vertical Lifting e a condição especial que ela preparou para você entrar na formação.</p>
+      <p class="watch__note">O vídeo começa sem som e com legendas. Toque em "Ouvir do início" para assistir com áudio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Dor -->
+<section class="section ask-sec" aria-labelledby="ask-t">
+  <div class="wrap">
+    <p class="label" id="ask-t">Se você trabalha com harmonização facial e ainda não domina os fios</p>
+    <div class="ask__grid">
+      <div class="ask"><p>Quantos pacientes você já deixou de atender por não ter segurança para trabalhar com fios?</p></div>
+      <div class="ask"><p>Quantas vezes fez um procedimento e se frustrou porque o resultado não foi o que você esperava?</p></div>
+    </div>
+    <div class="turn">
+      <h2 class="h2">Você já ouviu muito que fios não dão resultado.</h2>
+      <p class="lead">Mas será que o problema está realmente nos fios, ou na maneira como você aprendeu a utilizá-los? A diferença costuma estar no que vem antes da técnica: anatomia, planejamento e método.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Método -->
+<section class="section dark method" aria-labelledby="method-t">
+  <div class="wrap">
+    <div class="method__head">
+      <p class="label">O método da Cris</p>
+      <h2 class="h2" id="method-t">Foi por acreditar no potencial dos fios que a Cris desenvolveu o próprio método.</h2>
+      <p class="lead">Uma abordagem que une três conhecimentos, com um mesmo objetivo.</p>
+    </div>
+    <ul class="pillars">
+      <li class="pillar"><h3 class="h3">Conhecimento anatômico</h3><p>A base para indicar e posicionar os fios com segurança.</p></li>
+      <li class="pillar"><h3 class="h3">Planejamento facial</h3><p>Avaliar a face antes de decidir a conduta, e não repetir o mesmo procedimento em todo mundo.</p></li>
+      <li class="pillar"><h3 class="h3">Técnica</h3><p>Marcação, vetores e execução, com o raciocínio por trás de cada escolha.</p></li>
+    </ul>
+    <div class="method__out">
+      <p>O objetivo: buscar resultados naturais com precisão, segurança e método.</p>
+      <div class="vl">
+        <svg viewBox="0 0 22 34" fill="none" stroke="#D8BD97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 32V3M4 10l7-7 7 7"/></svg>
+        <div><b>Vertical Lifting</b><span>método exclusivo da Cris Prado</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Valor -->
+<section class="section value" aria-labelledby="value-t">
+  <div class="wrap value__grid">
+    <h2 class="h2" id="value-t">Quem domina uma técnica não precisa competir só por preço.</h2>
+    <p class="lead">Foi o que a Cris descobriu ao longo da carreira: quando você domina o que faz, passa a ter mais possibilidade de entregar valor, e a sua paciente percebe isso.</p>
+  </div>
+</section>
+
+<!-- Imagine (sequência de uma consulta) -->
+<section class="section tint imagine" aria-labelledby="imagine-t">
+  <div class="wrap">
+    <div class="imagine__head">
+      <p class="label">Imagine a próxima consulta</p>
+      <h2 class="h2" id="imagine-t">Chega uma paciente que reclama de flacidez e do envelhecimento.</h2>
+      <p class="lead">Em vez de oferecer sempre os mesmos procedimentos, você sabe exatamente o que fazer:</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="step__n">1</span><p>Avaliar a face com critério</p></li>
+      <li class="step"><span class="step__n">2</span><p>Identificar quando os fios podem fazer parte da solução</p></li>
+      <li class="step"><span class="step__n">3</span><p>Explicar a sua conduta com confiança</p></li>
+      <li class="step"><span class="step__n">4</span><p>Apresentar o seu planejamento</p></li>
+      <li class="step"><span class="step__n">5</span><p>Oferecer um tratamento de maior valor agregado</p></li>
+    </ol>
+    <p class="imagine__foot">É exatamente essa evolução profissional que a Cris quer ajudar você a conquistar.</p>
+  </div>
+</section>
+
+<!-- Conteúdo (sequência real: do planejamento ao método) -->
+<section class="section curr" aria-labelledby="curr-t">
+  <div class="wrap curr__grid">
+    <div class="curr__head">
+      <p class="label">O que você vai aprender</p>
+      <h2 class="h2" id="curr-t">Todo o conhecimento da Cris com fios, numa formação só.</h2>
+      <p class="lead" style="margin-top:22px">Do planejamento até o método Vertical Lifting. E a formação não para na técnica.</p>
+    </div>
+    <ol class="mods">
+      <li class="mod"><h3 class="h3">Planejamento</h3><p>Como avaliar a face e decidir quando e como os fios entram no tratamento.</p></li>
+      <li class="mod"><h3 class="h3">Anatomia</h3><p>O conhecimento anatômico que sustenta cada indicação e cada passo.</p></li>
+      <li class="mod"><h3 class="h3">Marcação</h3><p>Como planejar e marcar a face antes do procedimento.</p></li>
+      <li class="mod"><h3 class="h3">Vetores</h3><p>A direção de cada fio para buscar um resultado natural.</p></li>
+      <li class="mod is-method"><h3 class="h3">Vertical Lifting</h3><p>O método exclusivo da Cris Prado, que reúne tudo isso na prática.</p></li>
+      <li class="mod"><h3 class="h3">Valorização e posicionamento</h3><p>Como valorizar esse conhecimento e posicionar os seus procedimentos.</p></li>
+      <li class="mod"><h3 class="h3">Visão comercial</h3><p>Desenvolver uma visão comercial para a sua clínica e comunicar o valor do que você entrega.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="dark say" aria-label="Por que a formação vai além da técnica">
+  <div class="wrap">
+    <p>Não basta saber executar.</p>
+    <p>Você precisa saber comunicar o valor daquilo que entrega.</p>
+  </div>
+</section>
+
+<!-- Para quem é -->
+<section class="section aud" aria-labelledby="aud-t">
+  <div class="wrap">
+    <p class="label">Para quem é</p>
+    <h2 class="h2" id="aud-t" style="max-width:20ch">Para quem quer parar de ter medo dos fios e começar a usá&#8209;los com método.</h2>
+    <div class="aud__grid">
+      <div class="who"><h3 class="h3">Você trabalha com harmonização facial e ainda não domina os fios</h3><p>E deixa de atender pacientes por não ter segurança para indicar e executar.</p></div>
+      <div class="who"><h3 class="h3">Você já usou fios e o resultado não foi o que esperava</h3><p>E quer entender o que muda quando planejamento, anatomia e vetores vêm antes da técnica.</p></div>
+    </div>
+    <p class="note">Formação destinada a profissionais de saúde legalmente habilitados para procedimentos de harmonização facial. Nenhum procedimento invasivo é isento de riscos; indicação e resultados dependem da avaliação individual de cada paciente.</p>
+  </div>
+</section>
+
+<!-- Quem vai te ensinar -->
+<section class="section tint teacher" aria-labelledby="teacher-t">
+  <div class="wrap teacher__grid">
+    <figure class="teacher__photo"><img src="/transforme-faces-com-fios/assets/img/cris-prado.jpg" alt="Cris Prado em sua clínica, com modelos de fios de PDO sobre a mesa" width="720" height="960" loading="lazy" decoding="async"><figcaption>Na mesa, modelos ampliados de fios de PDO.</figcaption></figure>
+    <div>
+      <p class="label">Quem vai te ensinar</p>
+      <h2 class="display" id="teacher-t">Cris Prado</h2>
+      <p class="teacher__creds">Bióloga, biomédica, dentista e especialista em harmonização facial e fios. Criadora do método Vertical Lifting.</p>
+      <div class="teacher__body">
+        <p>Foi justamente por acreditar no potencial dos fios que a Cris desenvolveu o seu método, unindo conhecimento anatômico, planejamento facial e técnica.</p>
+        <p>No Transforme Faces com Fios, ela compartilha todo esse conhecimento e também o que aprendeu sobre valorizar e posicionar os procedimentos com fios na clínica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Oferta -->
+<section class="section dark offer" id="oferta" aria-labelledby="offer-t">
+  <div class="wrap offer__grid">
+    <div>
+      <p class="label" id="offerLabel">Pela primeira vez, uma condição especial</p>
+      <h2 class="h2" id="offer-t">Entre no Transforme Faces com Fios e aprenda o método Vertical Lifting.</h2>
+      <p class="lead">A Cris preparou uma condição para facilitar o seu acesso. É a possibilidade de investir no conhecimento que vai ampliar as suas possibilidades clínicas e comerciais.</p>
+      <ul class="incl" aria-label="O que está incluído">
+        <li><svg viewBox="0 0 12 22" fill="none" stroke="#D8BD97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V2M1.5 6.5 6 2l4.5 4.5"/></svg>Formação completa com fios: planejamento, anatomia, marcação e vetores</li>
+        <li><svg viewBox="0 0 12 22" fill="none" stroke="#D8BD97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V2M1.5 6.5 6 2l4.5 4.5"/></svg>O método exclusivo Vertical Lifting</li>
+        <li><svg viewBox="0 0 12 22" fill="none" stroke="#D8BD97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V2M1.5 6.5 6 2l4.5 4.5"/></svg>Como valorizar e posicionar os seus procedimentos</li>
+        <li><svg viewBox="0 0 12 22" fill="none" stroke="#D8BD97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V2M1.5 6.5 6 2l4.5 4.5"/></svg>Visão comercial para a sua clínica</li>
+      </ul>
+    </div>
+    <div class="card" id="offerCard" data-offer-watch>
+      <p class="card__tag" id="cardTag" hidden></p>
+      <p class="card__name">Transforme Faces com Fios</p>
+      <div id="priceBox">
+        <p class="noprice">Condição especial</p>
+        <p class="inst">Veja valores e formas de pagamento no próximo passo.</p>
+      </div>
+      <button type="button" class="btn btn--violet btn--wide js-cta" data-pos="oferta" id="offerCta">Garantir minha vaga</button>
+      <div class="card__clock" id="cardClock" data-clock-wrap hidden><span>A condição termina em</span><span class="clock" id="clockCard" data-clock></span></div>
+      <p class="card__safe">Pagamento em ambiente seguro. Você tem 7 dias para desistir da compra, como garante o Código de Defesa do Consumidor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Fechamento -->
+<section class="section close" id="fechamento" aria-labelledby="close-t">
+  <div class="wrap">
+    <h2 class="h2" id="close-t">Quanto custa ficar adiando uma habilidade que pode mudar a sua carreira?</h2>
+    <div class="paths">
+      <div class="path"><span>Um caminho</span><p>Continuar acreditando que os fios não funcionam.</p></div>
+      <div class="path path--yes"><span>O outro</span><p>Estudar, entender a técnica e descobrir novas possibilidades para oferecer à sua paciente.</p></div>
+    </div>
+    <div class="close__row">
+      <p id="closeLine">Uma condição especial é passageira. O conhecimento que você desenvolve pode acompanhar toda a sua carreira.</p>
+      <button type="button" class="btn btn--violet js-cta" data-pos="fechamento" id="closeCta">Quero fazer parte do Transforme</button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section tint faq" aria-labelledby="faq-t">
+  <div class="wrap faq__grid">
+    <h2 class="h2" id="faq-t">Perguntas frequentes</h2>
+    <div class="faq__list">
+      <details><summary>Nunca trabalhei com fios. A formação é para mim?</summary><div class="ans"><p>Sim. Ela foi pensada para quem trabalha com harmonização facial e ainda não domina os fios, começando por planejamento, anatomia, marcação e vetores.</p></div></details>
+      <details><summary>Já usei fios e não gostei do resultado. Vale a pena?</summary><div class="ans"><p>É justamente a pergunta que a Cris faz no vídeo: o problema está nos fios ou na forma como você aprendeu a usá-los? A formação mostra o raciocínio de planejamento e de vetores por trás do método Vertical Lifting.</p></div></details>
+      <details><summary>O que é o Vertical Lifting?</summary><div class="ans"><p>É o método exclusivo desenvolvido pela Cris Prado. Ele une conhecimento anatômico, planejamento facial e técnica, para buscar resultados naturais com precisão e segurança.</p></div></details>
+      <details><summary>A formação fala só de técnica?</summary><div class="ans"><p>Não. A Cris também ensina como valorizar esse conhecimento, posicionar os seus procedimentos e desenvolver uma visão comercial para a sua clínica.</p></div></details>
+      <details><summary>Fios eliminam o risco de intercorrências?</summary><div class="ans"><p>Não. Nenhum procedimento invasivo é isento de riscos. Por isso a formação começa pela anatomia e pelo planejamento, e a indicação depende sempre da avaliação de cada paciente.</p></div></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <span class="mark"><b>Transforme Faces com Fios</b><span>por Cris Prado</span></span>
+    <div>
+      <p>Formação destinada a profissionais de saúde legalmente habilitados para procedimentos de harmonização facial. O conteúdo não substitui treinamento prático supervisionado nem habilitação específica. Nenhum procedimento invasivo é isento de riscos; condutas e resultados dependem da avaliação individual de cada paciente.</p>
+      <p>Este site não é afiliado ao Facebook, ao Instagram nem à Meta Platforms, Inc. e não é endossado por essas empresas.</p>
+      <nav aria-label="Rodapé"><a href="/">Instituto Cris Prado</a><a href="/start-lips/">Start Lips</a><button type="button" class="js-priv">Política de privacidade</button><span>© 2026 Transforme Faces com Fios, por Cris Prado</span></nav>
+    </div>
+  </div>
+</footer>
+
+<div class="bar" id="bar" aria-hidden="true">
+  <div class="bar__info"><b>Transforme Faces com Fios</b><span id="barSub" data-price-text="{preco}">Condição especial</span></div>
+  <button type="button" class="btn btn--violet js-cta" data-pos="barra" tabindex="-1">Garantir vaga</button>
+</div>
+
+<dialog class="lead-dlg" id="leadDlg" aria-labelledby="dlg-t">
+  <div class="dlg__in">
+    <div class="dlg__top">
+      <ol class="stepper" aria-label="Etapas">
+        <li class="on"><i>1</i>Seus dados</li>
+        <li class="sep" aria-hidden="true"></li>
+        <li><i>2</i>Pagamento</li>
+      </ol>
+      <button type="button" class="x" id="dlgClose" aria-label="Fechar"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+    </div>
+    <h2 class="dlg__title" id="dlg-t">Sua vaga no Transforme Faces com Fios</h2>
+    <p class="dlg__sub">Preencha seus dados para ver a condição especial e seguir ao pagamento seguro. Leva menos de 20 segundos.</p>
+    <form id="leadForm" novalidate>
+      <div class="field" id="f-name">
+        <label for="in-name">Nome completo</label>
+        <input id="in-name" name="name" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" maxlength="120" required>
+        <p class="err">Digite seu nome e sobrenome.</p>
+      </div>
+      <div class="field" id="f-email">
+        <label for="in-email">E-mail</label>
+        <input id="in-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" enterkeyhint="next" maxlength="160" required>
+        <p class="err">Confira o e-mail. Ele precisa ter @ e domínio, como nome@gmail.com.</p>
+        <p class="hint" id="emailHint"></p>
+      </div>
+      <div class="field" id="f-phone">
+        <label for="in-phone">WhatsApp com DDD</label>
+        <input id="in-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 91234-5678" enterkeyhint="go" maxlength="16" required>
+        <p class="err">Informe um WhatsApp com DDD, como (11) 91234-5678.</p>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="in-company">Empresa</label><input id="in-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+      <button type="submit" class="btn btn--violet btn--wide dlg__btn" id="dlgBtn"><span class="spin" aria-hidden="true"></span><span class="lbl">Ir para o pagamento</span></button>
+      <p class="dlg__err" id="dlgErr" role="alert"></p>
+      <p class="dlg__safe"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="7" width="11" height="7.5" rx="2"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg><span>Seus dados ficam protegidos e são usados só para a sua inscrição e contato sobre a formação. Exclusivo para profissionais de saúde habilitados. Ao continuar, você concorda com a <button type="button" class="js-priv" style="background:none;border:0;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit">Política de privacidade</button>.</span></p>
+    </form>
+  </div>
+</dialog>
+
+<dialog class="priv-dlg" id="privDlg" aria-labelledby="priv-t">
+  <div class="dlg__in">
+    <div class="dlg__top"><h2 id="priv-t" style="margin:0">Política de privacidade</h2><button type="button" class="x" data-close aria-label="Fechar"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M1 1l12 12M13 1L1 13"/></svg></button></div>
+    <p>Esta política explica como o Transforme Faces com Fios, por Cris Prado, trata os dados pessoais coletados nesta página, conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+    <h3>Quais dados coletamos</h3>
+    <p>Nome, e-mail e WhatsApp informados no formulário, além de dados de navegação: origem do acesso (parâmetros de campanha), endereço IP, navegador e interações com a página, como rolagem e cliques.</p>
+    <h3>Para que usamos</h3>
+    <p>Para dar seguimento à sua inscrição, entrar em contato sobre a formação, prestar suporte e medir e melhorar nossos anúncios. Usamos o Pixel e a API de Conversões da Meta para isso.</p>
+    <h3>Com quem compartilhamos</h3>
+    <p>Com a plataforma de pagamento, para processar a compra, e com a Meta, de forma criptografada (hash), para mensuração de anúncios. Não vendemos seus dados.</p>
+    <h3>Seus direitos</h3>
+    <p>Você pode pedir acesso, correção ou exclusão dos seus dados a qualquer momento pelos canais de atendimento informados na compra.</p>
+  </div>
+</dialog>
+
+<script>
+window.CP_PAGE = {
+  product: 'transforme-faces-com-fios',
+  productName: 'Transforme Faces com Fios',
+  category: 'Formação',
+  video: 'cris-transforme-faces',
+  viewContent: function (s) { var d = { content_name: 'Transforme Faces com Fios', content_ids: ['transforme-faces-com-fios'], content_type: 'product', content_category: 'Formação' }; if (Number(s.price) > 0) { d.value = Number(s.price); d.currency = 'BRL'; } return d; }
+};
+</script>
+<script src="/assets/cp-track.js"></script>
+<script src="/assets/cp-course.js" defer></script>
+</body>
+</html>

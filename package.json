@@ -1,0 +1,14 @@
+{
+  "name": "instituto-cris-prado",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "@vercel/functions": "^2.0.0",
+    "pg": "^8.13.0"
+  }
+}
