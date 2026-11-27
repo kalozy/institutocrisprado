@@ -14,6 +14,7 @@
 <meta property="og:image" content="https://institutocrisprado.com.br/transforme-faces-com-fios/assets/img/video-poster.jpg">
 <link rel="preload" href="/transforme-faces-com-fios/assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://connect.facebook.net">
+<link rel="stylesheet" href="/assets/cp-results.css">
 <style>
 @font-face{font-family:"Mona Sans";src:url(/transforme-faces-com-fios/assets/fonts/mona-sans.woff2) format("woff2");font-weight:200 900;font-stretch:75% 125%;font-style:normal;font-display:swap}
 
@@ -204,6 +205,14 @@ h1,h2,h3{margin:0;font-family:var(--font);text-wrap:balance}
 .mod.is-method .h3{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--violet)}
 .mods__cap{position:absolute;left:0;top:-30px;font-stretch:115%;font-size:13px;color:var(--ink-3)}
 
+/* Resultados */
+.results__head{display:grid;gap:20px;margin-bottom:clamp(32px,5vw,48px)}
+@media (min-width:900px){.results__head{grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}}
+.results__head .h2{max-width:18ch}
+.results .rs{--rs-ink:var(--ink);--rs-muted:var(--ink-2);--rs-line:rgba(67,47,43,.16);--rs-card:var(--porcelain);--rs-font:var(--font);--rs-radius:16px}
+.results__foot{display:grid;gap:22px;align-items:center;margin-top:clamp(32px,5vw,44px);padding-top:26px;border-top:1px solid var(--line)}
+@media (min-width:900px){.results__foot{grid-template-columns:1fr auto;gap:60px}}
+.results__note{font-size:14px;line-height:1.5;color:var(--ink-2);margin:0;max-width:60ch}
 /* Statement band */
 .say{padding:clamp(72px,10vw,120px) 0}
 .say p{font-stretch:75%;font-weight:760;font-size:clamp(2.1rem,5.2vw,4.2rem);line-height:1.02;letter-spacing:-.01em;max-width:20ch;margin:0}
@@ -435,6 +444,30 @@ h1,h2,h3{margin:0;font-family:var(--font);text-wrap:balance}
     <div class="turn">
       <h2 class="h2">Você já ouviu muito que fios não dão resultado.</h2>
       <p class="lead">Mas será que o problema está realmente nos fios, ou na maneira como você aprendeu a utilizá-los? A diferença costuma estar no que vem antes da técnica: anatomia, planejamento e método.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Resultados da Cris (fotos com autorização das pacientes) -->
+<section class="section tint results" id="resultados" aria-labelledby="res-t">
+  <div class="wrap">
+    <div class="results__head">
+      <div><p class="label">Resultados da Cris</p><h2 class="h2" id="res-t">É isso que planejamento, vetores e método entregam.</h2></div>
+      <p class="lead">Casos atendidos pela Cris Prado na clínica. Cada tratamento é planejado para a paciente e pode associar técnicas.</p>
+    </div>
+    <div class="rs rs--rosto" data-gallery="rosto">
+  <div class="rs__track" role="region" aria-label="Resultados de tratamentos faciais. Arraste para o lado ou use as setas." tabindex="0">
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-01.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 1 de 5"><img src="/assets/resultados/rosto-01.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Cris Prado, caso 1" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-02.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 2 de 5"><img src="/assets/resultados/rosto-02.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Cris Prado, caso 2" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-03.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 3 de 5"><img src="/assets/resultados/rosto-03.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Cris Prado, caso 3" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-04.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 4 de 5"><img src="/assets/resultados/rosto-04.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Cris Prado, caso 4" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-05.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 5 de 5"><img src="/assets/resultados/rosto-05.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Cris Prado, caso 5" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+  </div>
+  <div class="rs__bar"><span class="rs__count" aria-live="polite">1 / 5</span><div class="rs__ctrl"><button type="button" class="rs__arrow rs__prev" aria-label="Resultados anteriores"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg></button><button type="button" class="rs__arrow rs__next" aria-label="Próximos resultados"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg></button></div></div>
+</div>
+    <div class="results__foot">
+      <p class="results__note">Casos da clínica da Cris Prado. Resultados variam conforme a avaliação e a anatomia de cada paciente.</p>
+      <button type="button" class="btn btn--violet js-cta" data-pos="resultados">Quero aprender o método</button>
     </div>
   </div>
 </section>
@@ -682,5 +715,6 @@ window.CP_PAGE = {
 </script>
 <script src="/assets/cp-track.js"></script>
 <script src="/assets/cp-course.js" defer></script>
+<script src="/assets/cp-results.js" defer></script>
 </body>
 </html>

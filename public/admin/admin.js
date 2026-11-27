@@ -120,7 +120,7 @@
       tiles = [tile('Visitas', fmt(visits), 'Sessões únicas na página principal'), tile('Chamaram no WhatsApp', fmt(ev.contact || 0), pct(ev.contact || 0, visits) + ' das visitas'),
         tile('Clicaram em um curso', fmt(ev.course_click || 0), pct(ev.course_click || 0, visits) + ' das visitas'), tile('Abriram o Instagram', fmt(ev.instagram || 0), pct(ev.instagram || 0, visits) + ' das visitas')];
       steps = [['Visitas', visits], ['Rolaram 50% da página', ev.scroll50 || 0], ['Rolaram 90% da página', ev.scroll90 || 0], ['Chamaram no WhatsApp', ev.contact || 0]];
-      eng = [['Rolaram 25%', ev.scroll25], ['Rolaram 75%', ev.scroll75], ['Ficaram 30 s', ev.time30], ['Ficaram 1 min', ev.time60], ['Ficaram 2 min', ev.time120], ['Clicaram em um curso', ev.course_click], ['Abriram o Instagram', ev.instagram]];
+      eng = [['Rolaram 25%', ev.scroll25], ['Rolaram 75%', ev.scroll75], ['Ficaram 30 s', ev.time30], ['Ficaram 1 min', ev.time60], ['Ficaram 2 min', ev.time120], ['Viram os resultados', ev.results], ['Ampliaram um resultado', ev.result_open], ['Clicaram em um curso', ev.course_click], ['Abriram o Instagram', ev.instagram]];
       $('#chartTitle').textContent = 'Contatos no WhatsApp por dia';
       $('#chartSub').textContent = 'Cliques no WhatsApp, telefone e e-mail. Passe o mouse para ver as visitas do dia.';
     } else {
@@ -129,7 +129,7 @@
         tile('Compras', fmt(st.purchases), st.purchases ? brl(st.revenue) + ' confirmados' : 'Confirmadas por webhook ou manualmente')];
       steps = [['Visitas', visits], ['Rolaram 50% da página', ev.scroll50 || 0], ['Viram a oferta', ev.offer || 0], ['Clicaram em um botão', ev.cta || 0],
         ['Começaram o formulário', ev.form_start || 0], ['Enviaram (leads)', st.leads], ['Foram ao checkout', ev.checkout || 0], ['Compraram', st.purchases]];
-      eng = [['Rolaram 25%', ev.scroll25], ['Rolaram 75%', ev.scroll75], ['Rolaram 90%', ev.scroll90], ['Ficaram 30 s', ev.time30], ['Ficaram 1 min', ev.time60], ['Ficaram 2 min', ev.time120], ['Ativaram o som do vídeo', ev.video_sound], ['Assistiram metade com som', ev.video50], ['Assistiram até o fim', ev.video_complete], ['Abriram uma pergunta', ev.faq]];
+      eng = [['Rolaram 25%', ev.scroll25], ['Rolaram 75%', ev.scroll75], ['Rolaram 90%', ev.scroll90], ['Ficaram 30 s', ev.time30], ['Ficaram 1 min', ev.time60], ['Ficaram 2 min', ev.time120], ['Ativaram o som do vídeo', ev.video_sound], ['Assistiram metade com som', ev.video50], ['Assistiram até o fim', ev.video_complete], ['Viram os resultados', ev.results], ['Ampliaram um resultado', ev.result_open], ['Abriram uma pergunta', ev.faq]];
       $('#chartTitle').textContent = 'Leads por dia';
       $('#chartSub').textContent = 'Formulários enviados. Passe o mouse para ver visitas, parciais, checkout e compras do dia.';
     }

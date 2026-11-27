@@ -8,6 +8,7 @@
 <meta property="og:url" content="https://institutocrisprado.com.br/">
 <meta property="og:image" content="https://institutocrisprado.com.br/assets/instituto/02-dra-cris-prado.webp">
 <link rel="preconnect" href="https://connect.facebook.net">
+<link rel="stylesheet" href="/assets/cp-results.css">
   <title>Dra. Cris Prado | Harmonização Facial</title>
   <meta name="description" content="Dra. Cris Prado, especialista em Reestruturação Facial em São Paulo. Harmonização facial com técnica, segurança e resultados naturais.">
   <meta property="og:title" content="Dra. Cris Prado | Harmonização Facial">
@@ -51,6 +52,16 @@
 .course-link__name{font:500 1.7rem/1.1 var(--serif);grid-column:1}
 .course-link__desc{font:400 .875rem/1.5 var(--sans);color:#d7cac1;grid-column:1}
 .course-link__go{grid-column:2;grid-row:1/span 2;width:20px;height:20px;color:var(--gold)}
+.results{background:var(--white)}
+.results-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:36px}
+.results-heading p{color:var(--muted);margin:14px 0 0;max-width:46ch}
+.results-tabs{display:inline-flex;gap:4px;padding:4px;border:1px solid #e1d3c8;border-radius:99px;flex:none}
+.results-tabs button{min-height:40px;padding:0 20px;border:0;border-radius:99px;background:transparent;color:var(--ink);font:500 .8125rem/1 var(--sans);letter-spacing:.04em;cursor:pointer}
+.results-tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.results .rs{--rs-ink:var(--ink);--rs-muted:var(--muted);--rs-line:#e8dbd1;--rs-card:var(--paper);--rs-font:var(--sans);--rs-radius:20px}
+.results-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:34px;padding-top:28px;border-top:1px solid #e8dbd1}
+.results-note{font-size:.8125rem;color:var(--muted);margin:0;max-width:52ch}
+@media (max-width:760px){.results-heading{flex-direction:column;align-items:flex-start;gap:22px;margin-bottom:26px}.results-foot{flex-direction:column;align-items:stretch;text-align:left}.results-foot .button{justify-content:center}}
 </style>
   
 </head>
@@ -74,7 +85,7 @@
         <span class="brand-text">Dra. Cris Prado<small>HARMONIZAÇÃO FACIAL</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="#inicio" class="active" aria-current="location">Início</a><a href="#sobre">Sobre</a><a href="#procedimentos">Procedimentos</a><a href="#cursos">Cursos</a><a href="#contato">Contato</a>
+        <a href="#inicio" class="active" aria-current="location">Início</a><a href="#sobre">Sobre</a><a href="#resultados">Resultados</a><a href="#procedimentos">Procedimentos</a><a href="#cursos">Cursos</a><a href="#contato">Contato</a>
       </nav>
       <div class="header-actions">
         <a class="social-link" href="https://instagram.com/dra.crisprado" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dra. Cris"><svg class="icon"><use href="#icon-instagram"/></svg></a>
@@ -83,7 +94,7 @@
       </div>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação no celular" hidden>
-      <a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#procedimentos">Procedimentos</a><a href="#cursos">Cursos</a><a href="#contato">Contato</a>
+      <a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#resultados">Resultados</a><a href="#procedimentos">Procedimentos</a><a href="#cursos">Cursos</a><a href="#contato">Contato</a>
       <a class="button" href="https://wa.me/5511932361210?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Cris%20Prado." target="_blank" rel="noopener noreferrer">Agendar consulta</a>
     </nav>
   </header>
@@ -131,6 +142,44 @@
       <div class="container split-grid">
         <div class="transformation-photo" data-reveal><div class="photo-frame"><img src="/assets/instituto/03-dra-cris-prado-harmonizacao-facial.webp" width="1500" height="999" alt="Dra. Cris Prado — harmonização facial" loading="lazy"></div><div class="photo-quote" aria-hidden="true">Sem perder nada<br>do que faz você<br><em>ser você.</em></div></div>
         <div class="transformation-copy" data-reveal><span class="eyebrow">Harmonização facial</span><h2 id="transformation-title">O que muda quando você decide <em>se cuidar de verdade</em></h2><p>Traços mais equilibrados, presença que chama atenção e uma autoconfiança que vem de dentro, sem perder nada do que faz você ser você.</p><p class="first-step">O primeiro passo é marcar sua avaliação.</p><a class="button" href="https://wa.me/5511932361210?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20harmoniza%C3%A7%C3%A3o%20facial%20e%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-whatsapp"/></svg>Agendar minha consulta</a></div>
+      </div>
+    </section>
+
+    <section class="results section-space" id="resultados" aria-labelledby="results-title">
+      <div class="container">
+        <div class="results-heading" data-reveal>
+          <div><span class="eyebrow">Resultados</span><h2 id="results-title">Antes e depois<br><em>de verdade</em></h2><p>Casos atendidos pela Dra. Cris Prado. Toque em uma foto para ver em tela cheia.</p></div>
+          <div class="results-tabs" role="tablist" aria-label="Tipo de resultado">
+            <button type="button" role="tab" id="tab-rosto" aria-selected="true" aria-controls="rs-rosto" data-rs-tab="rosto">Rosto</button>
+            <button type="button" role="tab" id="tab-labios" aria-selected="false" aria-controls="rs-labios" data-rs-tab="labios" tabindex="-1">Lábios</button>
+          </div>
+        </div>
+        <div class="rs rs--rosto" data-gallery="rosto" data-tabbed id="rs-rosto" role="tabpanel">
+  <div class="rs__track" role="region" aria-label="Resultados de tratamentos faciais. Arraste para o lado ou use as setas." tabindex="0">
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-01.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 1 de 5"><img src="/assets/resultados/rosto-01.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Dra. Cris Prado, caso 1" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-02.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 2 de 5"><img src="/assets/resultados/rosto-02.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Dra. Cris Prado, caso 2" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-03.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 3 de 5"><img src="/assets/resultados/rosto-03.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Dra. Cris Prado, caso 3" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-04.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 4 de 5"><img src="/assets/resultados/rosto-04.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Dra. Cris Prado, caso 4" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/rosto-05.webp" data-cap="Antes à esquerda, depois à direita." aria-label="Ampliar caso 5 de 5"><img src="/assets/resultados/rosto-05.webp" width="940" height="788" alt="Antes e depois de tratamento facial feito pela Dra. Cris Prado, caso 5" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--lr">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+  </div>
+  <div class="rs__bar"><span class="rs__count" aria-live="polite">1 / 5</span><div class="rs__ctrl"><button type="button" class="round-control rs__prev" aria-label="Resultados anteriores">Anterior</button><button type="button" class="round-control rs__next" aria-label="Próximos resultados">Próximo</button></div></div>
+</div>
+        <div class="rs rs--labios" data-gallery="labios" data-tabbed hidden id="rs-labios" role="tabpanel">
+  <div class="rs__track" role="region" aria-label="Resultados em lábios. Arraste para o lado ou use as setas." tabindex="0">
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-01.webp" data-cap="" aria-label="Ampliar caso 1 de 7"><img src="/assets/resultados/labios-01.webp" width="800" height="1000" alt="Antes e depois de lábios tratados pela Dra. Cris Prado, caso 1" loading="lazy" decoding="async"><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-02.webp" data-cap="" aria-label="Ampliar caso 2 de 7"><img src="/assets/resultados/labios-02.webp" width="800" height="1000" alt="Antes e depois de lábios tratados pela Dra. Cris Prado, caso 2" loading="lazy" decoding="async"><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-03.webp" data-cap="" aria-label="Ampliar caso 3 de 7"><img src="/assets/resultados/labios-03.webp" width="800" height="1000" alt="Antes e depois de lábios tratados pela Dra. Cris Prado, caso 3" loading="lazy" decoding="async"><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-04.webp" data-cap="Antes em cima, depois embaixo." aria-label="Ampliar caso 4 de 7"><img src="/assets/resultados/labios-04.webp" width="960" height="945" alt="Antes e depois de lábios tratados pela Dra. Cris Prado, caso 4" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--tb">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-05.webp" data-cap="Antes em cima, depois embaixo." aria-label="Ampliar caso 5 de 7"><img src="/assets/resultados/labios-05.webp" width="960" height="924" alt="Antes e depois de lábios tratados pela Dra. Cris Prado, caso 5" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--tb">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-06.webp" data-cap="Resultado depois do tratamento." aria-label="Ampliar caso 6 de 7"><img src="/assets/resultados/labios-06.webp" width="750" height="1000" alt="Lábios depois do tratamento com a Dra. Cris Prado, caso 6" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-07.webp" data-cap="Resultado depois do tratamento." aria-label="Ampliar caso 7 de 7"><img src="/assets/resultados/labios-07.webp" width="562" height="1000" alt="Lábios depois do tratamento com a Dra. Cris Prado, caso 7" loading="lazy" decoding="async" style="object-position:50% 55%"><span class="rs__tag rs__tag--a">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+  </div>
+  <div class="rs__bar"><span class="rs__count" aria-live="polite">1 / 7</span><div class="rs__ctrl"><button type="button" class="round-control rs__prev" aria-label="Resultados anteriores">Anterior</button><button type="button" class="round-control rs__next" aria-label="Próximos resultados">Próximo</button></div></div>
+</div>
+        <div class="results-foot">
+          <p class="results-note">Resultados variam conforme a avaliação e a anatomia de cada paciente.</p>
+          <a class="button" href="https://wa.me/5511932361210?text=Ol%C3%A1!%20Vi%20os%20resultados%20no%20site%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-whatsapp"/></svg>Quero agendar minha avaliação</a>
+        </div>
       </div>
     </section>
 
@@ -200,7 +249,7 @@
         <div class="footer-brand"><a class="brand" href="#inicio" aria-label="Dra. Cris Prado — início"><img src="/assets/instituto/01-imagem.webp" width="47" height="60" alt="Dra. Cris Prado — Harmonização Facial" loading="lazy"><span class="brand-text">Dra. Cris Prado<small>Harmonização Facial</small></span></a><a class="social-link" href="https://instagram.com/dra.crisprado" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dra. Cris"><svg class="icon"><use href="#icon-instagram"/></svg></a></div>
         <div><h3>Endereço</h3><a class="footer-address" href="https://maps.google.com/?q=Rua%20Alexandre%20Dumas%2C%20440%2C%20S%C3%A3o%20Paulo%2FSP" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-pin"/></svg><span>Rua Alexandre Dumas, 440,<br>São Paulo/SP</span></a></div>
         <div><h3>Contato</h3><ul><li><a href="tel:+5511932361210">(11) 93236-1210</a></li><li><a href="mailto:espacomiss@gmail.com">espacomiss@gmail.com</a></li><li><a href="https://instagram.com/dra.crisprado" target="_blank" rel="noopener noreferrer">@dra.crisprado</a></li></ul></div>
-        <div><h3>Navegue</h3><ul class="footer-nav"><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#procedimentos">Procedimentos</a></li><li><a href="#cursos">Cursos</a></li><li><a href="/start-lips/">Start Lips</a></li><li><a href="/transforme-faces-com-fios/">Transforme Faces com Fios</a></li><li><a href="#contato">Contato</a></li></ul></div>
+        <div><h3>Navegue</h3><ul class="footer-nav"><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#procedimentos">Procedimentos</a></li><li><a href="#resultados">Resultados</a></li><li><a href="#cursos">Cursos</a></li><li><a href="/start-lips/">Start Lips</a></li><li><a href="/transforme-faces-com-fios/">Transforme Faces com Fios</a></li><li><a href="#contato">Contato</a></li></ul></div>
       </div>
       <div class="footer-bottom"><p>© 2026 Dra. Cris Prado. Todos os direitos reservados.</p><p>Desenvolvido por <a href="https://landingpage.bowdesign.com.br/" target="_blank" rel="noopener noreferrer">Bow Webdesign</a></p></div>
     </div>
@@ -378,6 +427,7 @@
 </script>
 <script>window.CP_PAGE = { product: 'instituto' };</script>
 <script src="/assets/cp-track.js"></script>
+<script src="/assets/cp-results.js" defer></script>
 <script>
 /* Meta: cliques no WhatsApp/telefone/e-mail = Contact; Instagram e cursos = eventos personalizados */
 document.addEventListener('click', function (e) {

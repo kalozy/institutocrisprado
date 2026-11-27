@@ -15,6 +15,7 @@
 <link rel="preload" href="/start-lips/assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/start-lips/assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://connect.facebook.net">
+<link rel="stylesheet" href="/assets/cp-results.css">
 <style>
 @font-face{font-family:"Bodoni Moda";src:url(/start-lips/assets/fonts/bodoni-moda.woff2) format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(/start-lips/assets/fonts/bodoni-moda-italic.woff2) format("woff2");font-weight:400 900;font-style:italic;font-display:swap}
@@ -275,6 +276,14 @@ a{color:inherit}
 .foot nav a,.foot nav button{background:none;border:0;padding:0;cursor:pointer;color:var(--rose);text-decoration:underline;text-underline-offset:3px;font-size:14px}
 @media (max-width:899px){.foot{padding-bottom:calc(110px + env(safe-area-inset-bottom))}}
 
+/* Resultados */
+.results__head{display:grid;gap:18px;margin-bottom:clamp(32px,5vw,48px)}
+@media (min-width:900px){.results__head{grid-template-columns:1.05fr .95fr;gap:80px;align-items:end}}
+.results__lead{color:var(--ink-2);max-width:46ch;margin:0}
+.results .rs{--rs-ink:var(--ink);--rs-muted:var(--ink-2);--rs-line:#DFD4CB;--rs-card:var(--paper);--rs-font:var(--sans);--rs-radius:18px}
+.results__foot{display:grid;gap:22px;align-items:center;margin-top:clamp(32px,5vw,44px);padding-top:26px;border-top:1px solid rgba(145,107,85,.22)}
+@media (min-width:900px){.results__foot{grid-template-columns:1fr auto;gap:60px}}
+.results__note{font-size:14px;line-height:1.5;color:var(--ink-2);margin:0;max-width:60ch}
 /* Sticky mobile bar */
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(56,39,34,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--paper);border-top:1px solid rgba(185,155,97,.35);padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:14px;transform:translateY(110%);transition:transform .3s ease;visibility:hidden}
 .bar.is-on{transform:none;visibility:visible}
@@ -590,6 +599,32 @@ a{color:inherit}
   </div>
 </section>
 
+<!-- Resultados da Cris (fotos com autorização das pacientes) -->
+<section class="section blush results" id="resultados" aria-labelledby="res-t">
+  <div class="wrap">
+    <div class="results__head">
+      <div><p class="kicker">Resultados da Cris</p><h2 class="h2" id="res-t">Lábios desenhados, não apenas preenchidos.</h2></div>
+      <p class="results__lead">Casos atendidos pela Cris Prado. É esse olhar de planejamento, contorno e proporção que o Start Lips ensina.</p>
+    </div>
+    <div class="rs rs--labios" data-gallery="labios">
+  <div class="rs__track" role="region" aria-label="Resultados em lábios. Arraste para o lado ou use as setas." tabindex="0">
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-01.webp" data-cap="" aria-label="Ampliar caso 1 de 7"><img src="/assets/resultados/labios-01.webp" width="800" height="1000" alt="Antes e depois de lábios tratados pela Cris Prado, caso 1" loading="lazy" decoding="async"><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-02.webp" data-cap="" aria-label="Ampliar caso 2 de 7"><img src="/assets/resultados/labios-02.webp" width="800" height="1000" alt="Antes e depois de lábios tratados pela Cris Prado, caso 2" loading="lazy" decoding="async"><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-03.webp" data-cap="" aria-label="Ampliar caso 3 de 7"><img src="/assets/resultados/labios-03.webp" width="800" height="1000" alt="Antes e depois de lábios tratados pela Cris Prado, caso 3" loading="lazy" decoding="async"><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-04.webp" data-cap="Antes em cima, depois embaixo." aria-label="Ampliar caso 4 de 7"><img src="/assets/resultados/labios-04.webp" width="960" height="945" alt="Antes e depois de lábios tratados pela Cris Prado, caso 4" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--tb">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-05.webp" data-cap="Antes em cima, depois embaixo." aria-label="Ampliar caso 5 de 7"><img src="/assets/resultados/labios-05.webp" width="960" height="924" alt="Antes e depois de lábios tratados pela Cris Prado, caso 5" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Antes</span><span class="rs__tag rs__tag--tb">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-06.webp" data-cap="Resultado depois do tratamento." aria-label="Ampliar caso 6 de 7"><img src="/assets/resultados/labios-06.webp" width="750" height="1000" alt="Lábios depois do tratamento com a Cris Prado, caso 6" loading="lazy" decoding="async"><span class="rs__tag rs__tag--a">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+    <figure class="rs__item"><button class="rs__btn" type="button" data-full="/assets/resultados/labios-07.webp" data-cap="Resultado depois do tratamento." aria-label="Ampliar caso 7 de 7"><img src="/assets/resultados/labios-07.webp" width="562" height="1000" alt="Lábios depois do tratamento com a Cris Prado, caso 7" loading="lazy" decoding="async" style="object-position:50% 55%"><span class="rs__tag rs__tag--a">Depois</span><span class="rs__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14M7 5v4M5 7h4"/></svg></span></button></figure>
+  </div>
+  <div class="rs__bar"><span class="rs__count" aria-live="polite">1 / 7</span><div class="rs__ctrl"><button type="button" class="rs__arrow rs__prev" aria-label="Resultados anteriores"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg></button><button type="button" class="rs__arrow rs__next" aria-label="Próximos resultados"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg></button></div></div>
+</div>
+    <div class="results__foot">
+      <p class="results__note">Casos da clínica da Cris Prado. Resultados variam conforme a avaliação e a anatomia de cada paciente.</p>
+      <button type="button" class="btn btn--plum js-cta" data-pos="resultados">Quero aprender o Start Lips</button>
+    </div>
+  </div>
+</section>
+
 <!-- 10 + 11 · O que você leva + Oferta -->
 <section class="section dark offer" id="oferta" aria-labelledby="offer-t">
   <div class="wrap">
@@ -742,5 +777,6 @@ window.CP_PAGE = {
 </script>
 <script src="/assets/cp-track.js"></script>
 <script src="/assets/cp-course.js" defer></script>
+<script src="/assets/cp-results.js" defer></script>
 </body>
 </html>
